@@ -17,6 +17,9 @@ print("test passed")
 #Input and output files are grabbed from the command line
     #Input file is readable but not modifiable
     #Output file is writable and if there is none, one will be created (this might be unnecessary due to the check in line 11.    
+print(sys.argv[1])
+print(sys.argv[2])
+
 inputFile = open(sys.argv[1],'r') 
 outputFile = open(sys.argv[2],'w+') 
 
