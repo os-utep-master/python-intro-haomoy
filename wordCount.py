@@ -22,6 +22,8 @@ print(sys.argv[2])
 
 inputFile = open(sys.argv[1],'r') 
 outputFile = open(sys.argv[2],'w+') 
+inputFile.seek(0)
+outputFile.seek(0)
 
 print("files opened")
 
@@ -37,6 +39,7 @@ inputString = inputString.strip()
 print(inputString)
 inputWords = re.split('[ \t]', inputString)
 print(inputWords)
+
 for word in inputWords: 
     print("Printing words:")
     print(word)
