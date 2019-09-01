@@ -15,7 +15,7 @@ if len(sys.argv)<2:
 #Input and output files are grabbed from the command line
     #Input file is readable but not modifiable
     #Output file is writable and if there is none, one will be created (this might be unnecessary due to the check in line 11.    
-inputFile = open(sys.argv[0],;'r') 
+inputFile = open(sys.argv[0],'r') 
 outputFile = open(sys.argv[1],'w+') 
 
 #Declare dictionary to store word as key and its number of appareances as the value. 
