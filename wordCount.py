@@ -24,7 +24,9 @@ words = {}
 #Every line of the input file is read and all '.' are replaced with a blank space. 
 #Alternatively, inputFile.read() could have been used, but if the file size is huge, the string could fill our memory up. 
 #Afterwards, each line is tokenized by blank spaces and each token is added to the dictionary as a key and its value is updated. 
-for line in re.sub(".", "\s", inputFile.readlines()): 
+
+for line in inputFile.readlines(): 
+    line = re.sub(".", "\s", line)
     for word in re.split("\s", line):
         words[word] = words[word] + 1
         
