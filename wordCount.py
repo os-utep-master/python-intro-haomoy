@@ -8,7 +8,7 @@ import sys
 import re
 
 #Test case to check for the number of command line arguments
-if len(sys.argv)!=2:
+if len(sys.argv)<2:
     print("You must feed the program an input and utput file, in that order.")
     exit()
 
