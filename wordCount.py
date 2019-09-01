@@ -29,7 +29,9 @@ words = {}
 #Proceed to delete whitespace and split by periods and spaces
 #Turn words into lower case 
 inputString = inputFile.read()
+print(inputString)
 inputString = inputString.strip()
+print(inputString)
 inputWords = re.split('[ \t]', inputString)
 print(inputWords)
 for word in inputWords: 
