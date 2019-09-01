@@ -20,10 +20,8 @@ print("test passed")
 print(sys.argv[1])
 print(sys.argv[2])
 
-inputFile = open(sys.argv[1],'r') 
+inputFile = open(sys.argv[1],'r+') 
 outputFile = open(sys.argv[2],'w+') 
-inputFile.seek(0)
-outputFile.seek(0)
 
 print("files opened")
 
