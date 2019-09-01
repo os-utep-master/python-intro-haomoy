@@ -42,8 +42,7 @@ with open(sys.argv[1],'r') as inputFile:
 #Output file is grabbed from the command line.
 #Input file is readable but not modifiable.
 #Encased in 'with as' to control the opening, processing, and closing of the file.
-with open(sys.argv[1],'r') as inputFile:
-    outputFile = open(sys.argv[2],'w+') 
+with open(sys.argv[2],'w+') as outputFile:
     #The dictionary is listed and that list is sorted in alphabetical order. 
     #Every key and value is printed into the output document.
     for word, occurences in sorted(words.items()): 
