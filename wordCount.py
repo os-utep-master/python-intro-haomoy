@@ -25,6 +25,8 @@ words = {}
 #Alternatively, inputFile.read() could have been used, but if the file size is huge, the string could fill our memory up. 
 #Afterwards, each line is tokenized by blank spaces and each token is added to the dictionary as a key and its value is updated. 
 for line in inputFile.readlines(): 
+    print("Printing og lines:")
+    print(line)
     line = re.sub(".", "\s", line)
     print("Printing lines:")
     print(line)
