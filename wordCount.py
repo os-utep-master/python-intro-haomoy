@@ -7,13 +7,14 @@ Created on Sat Aug 31 16:08:56 2019
 import sys 
 import re
 
+'''
 #Test case to check for the number of command line arguments
 if len(sys.argv)<2:
     print("You must feed the program an input and utput file, in that order.")
     exit()
-
+    
 print("test passed")
-
+    
 #Input and output files are grabbed from the command line
     #Input file is readable but not modifiable
     #Output file is writable and if there is none, one will be created (this might be unnecessary due to the check in line 11.    
@@ -24,6 +25,12 @@ inputFile = open(sys.argv[1],'r+')
 outputFile = open(sys.argv[2],'w+') 
 
 print("files opened")
+'''
+
+inputPath = '/users/haomo/Documents/Classes/OS/lab1/python-intro-haomoy/declaration.txt'
+outputPath = '/users/haomo/Documents/Classes/OS/lab1/python-intro-haomoy/output.txt'
+inputFile = open(inputPath,'r')
+outputFile = open(outputPath, 'w+')
 
 #Declare dictionary to store word as key and its number of appareances as the value. 
 words = {}
