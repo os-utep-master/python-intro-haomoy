@@ -25,10 +25,26 @@ print("files opened")
 #Declare dictionary to store word as key and its number of appareances as the value. 
 words = {}
 
-#Every line of the input file is read and all '.' are replaced with a blank space. 
-#Alternatively, inputFile.read() could have been used, but if the file size is huge, the string could fill our memory up. 
-#Afterwards, each line is tokenized by blank spaces and each token is added to the dictionary as a key and its value is updated. 
-for line in inputFile.readlines(): 
+#Read input file as a single string
+#Proceed to delete whitespace and split by periods and spaces
+#Turn words into lower case 
+inputString = inputFile.read()
+inputString = inputString.strip()
+inputWords = re.split('[ \t]', inputString)
+print(inputWords)
+for word in inputWords: 
+    print("Printing words:")
+    print(word)
+    word = word.lower() 
+    print(word)
+    if (words[word]):
+        words[word] += 1
+    else: 
+        words[word] = 1 
+    print("End for loop")
+    
+'''
+for line in inputLines: 
     print("Printing og lines:")
     print(line)
     line = re.sub(".", "\s", line)
@@ -39,7 +55,7 @@ for line in inputFile.readlines():
         print("Word:")
         print(word)
         words[word] += 1
-
+'''
 inputFile.close()
 print("input closed")
 #The dictionary listed and that lis is sorted in alphabetical order. 
