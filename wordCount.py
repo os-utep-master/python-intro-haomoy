@@ -12,11 +12,15 @@ if len(sys.argv)<2:
     print("You must feed the program an input and utput file, in that order.")
     exit()
 
+print("test passed")
+
 #Input and output files are grabbed from the command line
     #Input file is readable but not modifiable
     #Output file is writable and if there is none, one will be created (this might be unnecessary due to the check in line 11.    
 inputFile = open(sys.argv[1],'r') 
 outputFile = open(sys.argv[2],'w+') 
+
+print("files opened")
 
 #Declare dictionary to store word as key and its number of appareances as the value. 
 words = {}
@@ -24,7 +28,7 @@ words = {}
 #Every line of the input file is read and all '.' are replaced with a blank space. 
 #Alternatively, inputFile.read() could have been used, but if the file size is huge, the string could fill our memory up. 
 #Afterwards, each line is tokenized by blank spaces and each token is added to the dictionary as a key and its value is updated. 
-for line in inputFile.readline(): 
+for line in inputFile.readlines(): 
     print("Printing og lines:")
     print(line)
     line = re.sub(".", "\s", line)
@@ -34,10 +38,10 @@ for line in inputFile.readline():
         word = word.lower()
         print("Word:")
         print(word)
-        words[word] = words[word] + 1
+        words[word] += 1
 
 inputFile.close()
-
+print("input closed")
 #The dictionary listed and that lis is sorted in alphabetical order. 
 #Every key and value is printed into the output document.
 for word, occurences in sorted(words.items()): 
@@ -45,5 +49,5 @@ for word, occurences in sorted(words.items()):
 
 outputFile.close()
 
-    
+print("end")
     
